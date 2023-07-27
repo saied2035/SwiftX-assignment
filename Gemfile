@@ -7,6 +7,7 @@ ruby '3.1.2'
 gem 'rails', '~> 7.0.6'
 gem 'rubocop', '>= 1.0', '< 2.0'
 # Use postgresql as the database for Active Record
+gem 'cancancan'
 gem 'devise'
 gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
