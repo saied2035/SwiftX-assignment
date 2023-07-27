@@ -6,6 +6,7 @@ class Ability
     return unless user.present?
 
     can :destroy, User, id: user.id
+    can :manage, Record, user_id: user.id
     return unless user.role.downcase == 'manager'
 
     can :manage, User do |u|
@@ -15,7 +16,7 @@ class Ability
 
     can :manage, :all
     cannot :manage, User do |u|
-      (u.role == 'manager' || u.role == 'Manager') && u.id != user.id
+      (u.role == 'admin' || u.role == 'Admin') && u.id != user.id
     end
     #   can :read, :all
     #   return unless user.admin?
