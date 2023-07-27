@@ -22,7 +22,7 @@ class RecordsController < ApplicationController
 
   def update
     if @record.update(record_params)
-      render json: 'Record has been created successfully', status: :ok
+      render json: 'Record has been updated successfully', status: :ok
     else
       render json: 'Faild to update record. Please check your body request.', status: :unprocessable_entity
     end
