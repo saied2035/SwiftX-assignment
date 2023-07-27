@@ -1,22 +1,22 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
     # Define abilities for the user here. For example:
-        return unless user.present?
-        puts "ability user #{user.id}"
-        can :destroy, User, id: user.id
-        return unless user.role.downcase === "manager"
-        can :manage, User do |u|
-          u.role == "user" || u.role == "User" 
-        end  
-        return unless user.role.downcase === "admin"
-        can :manage, :all
-        cannot :manage, User do |u|
-          (u.role == "manager" || u.role == "Manager") && u.id != user.id ,
-        end  
+    return unless user.present?
+
+    can :destroy, User, id: user.id
+    return unless user.role.downcase == 'manager'
+
+    can :manage, User do |u|
+      u.role == 'user' || u.role == 'User'
+    end
+    return unless user.role.downcase == 'admin'
+
+    can :manage, :all
+    cannot :manage, User do |u|
+      (u.role == 'manager' || u.role == 'Manager') && u.id != user.id
+    end
     #   can :read, :all
     #   return unless user.admin?
     #   can :manage, :all
