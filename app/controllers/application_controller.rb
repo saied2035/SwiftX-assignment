@@ -1,15 +1,9 @@
 class ApplicationController < ActionController::API
   before_action :update_allowed_parameters, if: :devise_controller?
     rescue_from CanCan::AccessDenied do |exception|
-      puts "user #{current_user}"
-      message = exception.action.to_s == 'create' && exception.subject.to_s == 'session' ?
-       I18n.t('devise.failure.invalid', authentication_keys: get_authentication_keys) :
-       "You are not authorized."
-    respond_to do |format|
-      format.json { render json: message }
-      format.html { redirect_to root_path, alert: message }
+      message = "You are not authorized."
+      render json: message
     end
-  end
   protected
 
   def update_allowed_parameters
