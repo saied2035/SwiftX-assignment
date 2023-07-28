@@ -5,6 +5,21 @@ class RecordsController < ApplicationController
     render json: @records
   end
   
+  def report
+  	if (params[:member_id].to_i == current_user.id.to_i) == false && current_user.role.downcase == "user" 
+  	  return render json: "You are not authorized."
+    end
+  	user = User.find(params[:member_id])
+  	records = user.records.order('date asc')
+  	dates = records.pluck(:date)
+  	newest_date = dates.last
+  	nearest_date_to_week = dates.min_by {|x| ((newest_date - x).abs - 7).abs}
+    desired_records = records.where('date >= ?', nearest_date_to_week).where('date <= ?', newest_date)
+    render json: {report: {
+    	average_speed: desired_records.average(:speed),
+    	average_distance: desired_records.average(:distance)
+    }}
+  end	
   def filter
   	begin
   	  start_date = params[:from].to_date
