@@ -10,9 +10,10 @@ class Ability
     return if user.role.downcase == 'user'
 
     can :manage, User, id: user.id
-    can :manage, User, role: "user"
-    can :manage, User, role: "User"
+    can :manage, User, role: 'user'
+    can :manage, User, role: 'User'
     return if user.role.downcase == 'manager'
+
     can :manage, :all
     #   can :read, :all
     #   return unless user.admin?
