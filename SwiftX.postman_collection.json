@@ -1,0 +1,1945 @@
+{
+	"info": {
+		"_postman_id": "e10523e8-166c-4361-89bc-278c5d809414",
+		"name": "SwiftX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "sign up",
+					"item": [
+						{
+							"name": "sign_up",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"user\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"user123456\",\r\n    \"password_confirmation\": \"user123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "sign_up",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"user\": {\r\n    \"name\": \"user\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"user123456\",\r\n    \"password_confirmation\": \"user123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/users/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"users",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "strict-origin-when-cross-origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "_interslice_session=EgwrgHmlXx2XtnFftIkCenpIkfxOu0Z3N6xXaVRqA%2F1ve9NPvjIcdhtBgCPyg%2FRkw8fK9QCRJO1IfwIIxvcvM9WC5WRU4UBl6UVM5NdYG8idcPZruCBnThm7bu9puBEl4DkKLtRDr5dM9xtKJ9P%2BarP38dqcqqEC8fkRYilgtSiTLp2MnCPaZN9Errka%2FPL6g%2BlF4XUz81vCvqdL2mayRd%2FTgXIp4EprUSpoMpHhVAe5e0%2FuVIchsYmiRkE7rS8%2B%2BWLrgFPGgs8rDcKVmOe20MjL9uPofcSA5nbG--v4stlDGhA75nzAaG--wM65PeaTS3D4O3SJhqnJig%3D%3D; path=/; HttpOnly; SameSite=Lax"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"058e1eb51a6534fee8a214facc01cc9c\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "1f766b99-7148-439d-9aeb-f0a795cbc3d6"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.493932"
+										},
+										{
+											"key": "Server-Timing",
+											"value": "start_processing.action_controller;dur=1.77, sql.active_record;dur=15.83, process_action.action_controller;dur=283.99"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "Welcome! You have signed up successfully."
+								}
+							]
+						},
+						{
+							"name": "sign_up when there is a user session",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"user2\",\r\n    \"email\": \"user2@gmail.com\",\r\n    \"password\": \"user2123456\",\r\n    \"password_confirmation\": \"user2123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "sign_up when there is a user session",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"user\": {\r\n    \"name\": \"user2\",\r\n    \"email\": \"user2@gmail.com\",\r\n    \"password\": \"user2123456\",\r\n    \"password_confirmation\": \"user2123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/users/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"users",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "strict-origin-when-cross-origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "_interslice_session=4mJP4xo6kBFHCoeICQGoHp8JyApUvy7Z4RyEmv1uh9M8%2BfIYGuMJLXXjOP9F2NKwzLL5ieEAzDVhHBeDl5X%2Fp8xXlRB9yArDd1YwgOHf4BEht8u12Bt4T%2FTLFTUCYGGAVjeYK%2BLpJn2R8parDpo1sN4kyPytigprUm%2BxT%2Fryx%2FDAoeGOg8veUBc3VYRWK3jigTUSvDNNMNpIboeRRkZBm0U8srsCLgqeGS9fMkRlq69JIrmMd3a2MjuX3dRMYsbynihnQw8Univ%2Fs9qpFYjLimgwT6J07rbrVkx4--iOl2pUukdQt43Aw9--%2FBOMTz0uDomHXNFUiPyHFg%3D%3D; path=/; HttpOnly; SameSite=Lax"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ff621e80d2960e11a53c92621dad96d9\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "a8cd7cbe-50f6-41bc-be2f-644d526dc204"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.412910"
+										},
+										{
+											"key": "Server-Timing",
+											"value": "start_processing.action_controller;dur=1.40, sql.active_record;dur=3.08, instantiation.active_record;dur=0.08, halted_callback.action_controller;dur=8.14, process_action.action_controller;dur=15.11"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "You are already signed in."
+								}
+							]
+						},
+						{
+							"name": "sign up with same email",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"user3\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"user3123456\",\r\n    \"password_confirmation\": \"user3123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										""
+									]
+								},
+								"description": "Make sure you clear the Cookies or sign out. (remove any user seesions)"
+							},
+							"response": [
+								{
+									"name": "sign up with same email",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"user\": {\r\n    \"name\": \"user3\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"user3123456\",\r\n    \"password_confirmation\": \"user3123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/users/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"users",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "strict-origin-when-cross-origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "_interslice_session=DPXI1S2M8EloMuVfIIvqgO5JS980UYBCBGlQFdU2k55mbkPDPV4RnkvM6jn0Esr9sNWeTNaECzSIR7T83huuDAIEh3Kwy9AH9UzHCmr4L5Qcpf2lznxIP31Jb4yJBEvqHlVsqTzL1Pz9xdgKMlCnz8318w0zNtwQciHj2zlGyPcstDclZgIRQnklwA%3D%3D--v7s1%2FD4Ts1QJfhXA--AzfY5eHJWM5aXNZfOzQ91w%3D%3D; path=/; HttpOnly; SameSite=Lax"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"38e33bb9c5554bbe019c176d56af847c\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "3c3b5ee7-0826-4728-85bd-8d04fedc7f77"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.489852"
+										},
+										{
+											"key": "Server-Timing",
+											"value": "start_processing.action_controller;dur=1.58, sql.active_record;dur=7.17, process_action.action_controller;dur=268.89"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    \"Email has already been taken\"\n]"
+								}
+							]
+						},
+						{
+							"name": "users delete their own accounts",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "users delete their own accounts",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/users/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"users",
+												""
+											]
+										}
+									},
+									"status": "See Other",
+									"code": 303,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "strict-origin-when-cross-origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "_interslice_session=8Y4u%2FyKYhpTbSOjMl3Z%2F2YIY6VPSfBamdPp2qmutyi6rqSo3GJBTPoxiFcAo4jcipW6tmtxRc%2BuH9zHTMr9OZnnHGADI%2Fzg%2FBT8xmPFcEAdS%2Fl%2BJKqHHXb7HMBXOC9h6ZCw2cDDpLGRAYJBoMcafoPgNGbmmB%2F%2BvfEfynNiIPL0B6wvrpMOE%2FaRVjg%3D%3D--x9xy0xfC%2FFmcEK0h--cNiDE1kQ2Z46C0DNu8YIMw%3D%3D; path=/; HttpOnly; SameSite=Lax"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "41ae7323-f163-42be-815c-983e6794a041"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.239793"
+										},
+										{
+											"key": "Server-Timing",
+											"value": "start_processing.action_controller;dur=0.66, sql.active_record;dur=22.14, instantiation.active_record;dur=6.84, process_action.action_controller;dur=34.63"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "Bye! Your account has been successfully cancelled. We hope to see you again soon."
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "sign out",
+					"item": [
+						{
+							"name": "sign out",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/sign_out",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"sign_out"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "sign out",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/users/sign_out",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"users",
+												"sign_out"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "strict-origin-when-cross-origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "_interslice_session=JTcMAbjeIxa0BcrzTPqUhZGiSg8euGulnbzw5gGK1YSrAmA49paaPWnqNMYe1I0ER8CFxDJ8TaYtyqezCmZaRh8LPN7PXDf1fc5AeTYaljYdAG4MHMML9TiAiTbbQ%2B4ER1jUT08wmTiE%2BBWZntLtB2TSToFmIfKrqP8BMT0GczeafJ7K1OMFlNF7rg%3D%3D--S2AaRZACOV0ctiBJ--NvZk6z1cSPx5RNPx35mb%2FA%3D%3D; path=/; HttpOnly; SameSite=Lax"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"80c009a21f9b67e25471c6606b28629e\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "d1c50a4a-0cd4-486b-b965-472a5c3a0d38"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.208507"
+										},
+										{
+											"key": "Server-Timing",
+											"value": "start_processing.action_controller;dur=0.87, halted_callback.action_controller;dur=0.62, process_action.action_controller;dur=2.40"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "Signed out successfully."
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "sign in",
+					"item": [
+						{
+							"name": "sign in ",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"email\": \"user4@gmail.com\",\r\n    \"password\": \"user4123456\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users/sign_in",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"sign_in"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "sign in ",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"user\": {\r\n    \"email\": \"user4@gmail.com\",\r\n    \"password\": \"user4123456\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/users/sign_in",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"users",
+												"sign_in"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "strict-origin-when-cross-origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "_interslice_session=5wwzjcvKE%2B05rSi9wyPZMLm8SzicRjjlhkrcuPV%2FOzx%2B%2BphI81bnnBk4WVa3yx8oIhQU5FizVChdkT%2B1raUpSqMdh3x6zY1Ff5Hvc5K2KUqvFFJHs4qjFOHyzxMMZd%2FgTM%2FErUuafXJeozKcnB1T3%2BJnfyeErN4SIfAuvqUXhwjGtLapT1Jcfba1gfC%2BznbVrqWT0gtJThv5wrdTIo7K6rzz%2Bh6ZxqcouXhpvh2ee3OifwkCKQAFrnuGc4r6uAamOzoo%2BJ%2BNcQU4EyarTNeaMoDK8Y8y7PiNYLLw--JBoVGjlm%2FgwwHVdF--QgdKtQZ5NmIyRFRTYBQmUQ%3D%3D; path=/; HttpOnly; SameSite=Lax"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"460596061d64504bab4c7a740a183624\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "2d2daedc-ac37-4a4c-b790-72900d9043c3"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.505193"
+										},
+										{
+											"key": "Server-Timing",
+											"value": "start_processing.action_controller;dur=1.59, sql.active_record;dur=2.70, instantiation.active_record;dur=0.07, process_action.action_controller;dur=286.35"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "Signed in successfully."
+								}
+							]
+						},
+						{
+							"name": "sign in when there is user session",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"email\": \"user2@gmail.com\",\r\n    \"password\": \"user2123456\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users/sign_in",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"sign_in"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "sign in when there is user session",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"user\": {\r\n    \"email\": \"user2@gmail.com\",\r\n    \"password\": \"user2123456\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/users/sign_in",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"users",
+												"sign_in"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "strict-origin-when-cross-origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "_interslice_session=YHVfx9WlcbFtoSKIZpgESVQhogWe2wlVYpiFKjwqQ%2BTGVglNcAYJZhFwUJFCSI4ZOUUEKjaRRZo5e5ozpt0K0Alp8WoxJxq2EMyElTauADyxHtld1L0qY%2BBejzOtIPGwIUn15GK8xgmzH9C0%2Fe%2FTIc79Z92MVtbGAZYGFdmYRrV%2Bl9Mu9sBXCJsyEMjvOUu2FIXn%2BxaxMUYs5YtLiaTbIENovekdjd8tSKgkoaOABSv1OyaVrrMEtVVGU%2F6oGQowDfScfjiwmf3XBPUdtjXY5Z7SRMcvo2y%2Bukjg--VYiy3OFYuIf1vicq--PQMoWjd%2BW29bI%2Bgxrzilag%3D%3D; path=/; HttpOnly; SameSite=Lax"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ff621e80d2960e11a53c92621dad96d9\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "c50da38f-a903-4993-9a02-9461f9e29617"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.214246"
+										},
+										{
+											"key": "Server-Timing",
+											"value": "start_processing.action_controller;dur=1.52, sql.active_record;dur=2.73, instantiation.active_record;dur=0.06, halted_callback.action_controller;dur=1.20, process_action.action_controller;dur=7.77"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "You are already signed in."
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user role",
+			"item": [
+				{
+					"name": "users controller",
+					"item": [
+						{
+							"name": "fetch all members",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fetch a member",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create member",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"saied\",\r\n    \"email\": \"saied@gmail.com\",\r\n    \"password\": \"saied123456\",\r\n    \"password_confirmation\": \"saied123456\",\r\n    \"role\": \"admin\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update member",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"saied\",\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"user123456\",\r\n    \"password_confirmation\": \"user123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete member",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"saied\",\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"user123456\",\r\n    \"password_confirmation\": \"user123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"8"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "Role user does not have any authrization for users controller",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "records controller",
+					"item": [
+						{
+							"name": "fetch all records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/9/records",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fetch a record",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/9/records/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create record",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"record\": {\r\n        \"time\": {\r\n          \"hours\": 1,\r\n          \"minutes\": 20\r\n        },\r\n        \"date\": \"27-6-2023\", \r\n        \"distance\": 2\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/9/records",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update record",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"record\": {\r\n        \"time\": {\r\n          \"hours\": 1,\r\n          \"minutes\": 20\r\n        },\r\n        \"date\": \"27-6-2023\", \r\n        \"distance\": 4\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/9/records/57",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records",
+										"57"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "destroy record",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/9/records/57",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records",
+										"57"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "filter by date",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"from\": \"2023-05-24\",\r\n    \"to\": \"2023-05-26\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/records/filter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"records",
+										"filter"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "report average speed and distance per week",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/9/records/report",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records",
+										"report"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "This test authorizations if the signed_in user has user role.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "manager role",
+			"item": [
+				{
+					"name": "users controller",
+					"item": [
+						{
+							"name": "fetch all members",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fetch a member",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create member",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"saied\",\r\n    \"email\": \"saied@gmail.com\",\r\n    \"password\": \"saied123456\",\r\n    \"password_confirmation\": \"saied123456\",\r\n    \"role\": \"admin\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update member",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"saied\",\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"user123456\",\r\n    \"password_confirmation\": \"user123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete member",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"saied\",\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"user123456\",\r\n    \"password_confirmation\": \"user123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "Role user does not have any authrization for users controller",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "records controller",
+					"item": [
+						{
+							"name": "fetch all records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/9/records",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fetch a record",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/9/records/18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records",
+										"18"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create record",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"record\": {\r\n        \"time\": {\r\n          \"hours\": 0,\r\n          \"minutes\": 20\r\n        },\r\n        \"date\": \"24-4-2023\", \r\n        \"distance\": 0.5\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/5/records",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"5",
+										"records"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update record",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"record\": {\r\n        \"time\": {\r\n          \"hours\": 0,\r\n          \"minutes\": 20\r\n        },\r\n        \"date\": \"24-4-2023\", \r\n        \"distance\": 0.75\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/5/records/50",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"5",
+										"records",
+										"50"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "destroy record",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/5/records/50",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"5",
+										"records",
+										"50"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "filter by date",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"from\": \"2023-02-25\",\r\n    \"to\": \"2023-02-27\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/records/filter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"records",
+										"filter"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "report average speed and distance per week",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/9/records/report",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records",
+										"report"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "This test authorizations if the signed_in user has manager role.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "admin role",
+			"item": [
+				{
+					"name": "users controller",
+					"item": [
+						{
+							"name": "fetch all members",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fetch a member",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create member",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"saied\",\r\n    \"email\": \"saied@gmail.com\",\r\n    \"password\": \"saied123456\",\r\n    \"password_confirmation\": \"saied123456\",\r\n    \"role\": \"admin\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update member",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"haha\",\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"user123456\",\r\n    \"password_confirmation\": \"user123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete member",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n    \"name\": \"saied\",\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"user123456\",\r\n    \"password_confirmation\": \"user123456\",\r\n    \"role\": \"user\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "Role user does not have any authrization for users controller",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "records controller",
+					"item": [
+						{
+							"name": "fetch all records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/9/records",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "fetch a record",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/9/records/18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records",
+										"18"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create record",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"record\": {\r\n        \"time\": {\r\n          \"hours\": 0,\r\n          \"minutes\": 20\r\n        },\r\n        \"date\": \"24-4-2023\", \r\n        \"distance\": 0.5\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/5/records",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"5",
+										"records"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update record",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"record\": {\r\n        \"time\": {\r\n          \"hours\": 0,\r\n          \"minutes\": 20\r\n        },\r\n        \"date\": \"25-4-2023\", \r\n        \"distance\": 0.75\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/members/5/records/51",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"5",
+										"records",
+										"51"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "destroy record",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/5/records/51",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"5",
+										"records",
+										"51"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "filter by date",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"from\": \"2023-01-1\",\r\n    \"to\": \"2023-07-27\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/records/filter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"records",
+										"filter"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "report average speed and distance per week",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/members/9/records/report",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"9",
+										"records",
+										"report"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "This test authorizations if the signed_in user has admin role.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}

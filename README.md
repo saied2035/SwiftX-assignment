@@ -25,8 +25,7 @@ then run:
 
 
 ## Postman collection
-
-
+  [Collection](./SwiftX.postman_collection.json)
 ## Authors
 
 👤 **Saied Gaffer**
