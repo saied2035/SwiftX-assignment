@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::API
   before_action :update_allowed_parameters, if: :devise_controller?
   rescue_from CanCan::AccessDenied do |_exception|
+    puts "#{current_user.role}"
     message = 'You are not authorized.'
     render json: message
   end

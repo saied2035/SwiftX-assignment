@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   load_and_authorize_resource
   def index
-    @users = User.accessible_by(current_ability)
-    render json: @records
+    @members = User.accessible_by(current_ability)
+    render json: @members
   end
 
   def show
@@ -10,19 +11,23 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      render json: 'User has been created successfully', status: :ok
+    if current_user.role.downcase == "manager" && params[:user][:role].downcase == "admin"
+      render json: "You are not authorized."
+      return
+    end 
+    @member = User.new(user_params)
+    if @member.save
+      render json: 'Member has been created successfully', status: :ok
     else
-      render json: 'Faild to save user into database. Please check your body request.', status: :unprocessable_entity
+      render json: 'Faild to save member into database. Please check your body request.', status: :unprocessable_entity
     end
   end
 
   def update
     if @user.update(user_params)
-      render json: 'User has been updated successfully', status: :ok
+      render json: 'Member has been updated successfully', status: :ok
     else
-      render json: 'Faild to update user. Please check your body request.', status: :unprocessable_entity
+      render json: 'Faild to update member. Please check your body request.', status: :unprocessable_entity
     end
   end
   def destroy
