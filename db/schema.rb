@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_24_215029) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_27_083617) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "records", force: :cascade do |t|
+    t.bigint "member_id", null: false
+    t.string "time", null: false
+    t.date "date", null: false
+    t.float "distance", null: false
+    t.float "speed", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_records_on_member_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -28,4 +39,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_24_215029) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "records", "users", column: "member_id"
 end

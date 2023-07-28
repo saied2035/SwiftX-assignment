@@ -1,24 +1,50 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#  SwiftX Assignment
 
-Things you may want to cover:
+>  RESTful API that tracks jogging times of users. 
 
-* Ruby version
+## preequests
+  - Ruby (3.1.2)
+  - Rails (7.0.6)
+  - Postgresql database in your machine
+  - Make sure the postgresql clint is running before you run the project.
 
-* System dependencies
+## Getting Started
 
-* Configuration
+To get a local copy up and running follow these simple example steps.
+- for SSH:
+     - `git@github.com:saied2035/SwiftX-assignment.git`
+- for https:
+     - `https://github.com/saied2035/SwiftX-assignment.git`
 
-* Database creation
+then run:
 
-* Database initialization
+- `bundle install` 
+- `rails db:create db:migrate`
+- `rails db:seed`
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Postman collection
+  [Collection](./SwiftX.postman_collection.json)
+## Authors
 
-* Deployment instructions
+👤 **Saied Gaffer**
 
-* ...
+- GitHub: [@Saied2035](https://github.com/saied2035)
+- Twitter: [@SaiedGaffer](https://twitter.com/SaiedGaffer)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/saiedgaffer/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/saied2035/SwiftX-assignment/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse: [microverse community](https://github.com/microverseinc)
+- Original Design by : [Gregoire Vella](https://www.behance.net/gregoirevella)
