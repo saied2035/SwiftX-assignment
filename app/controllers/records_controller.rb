@@ -4,6 +4,23 @@ class RecordsController < ApplicationController
     @records = Record.accessible_by(current_ability)
     render json: @records
   end
+  
+  def filter
+  	begin
+  	  start_date = params[:from].to_date
+  	  end_date = params[:to].to_date	
+  	rescue ArgumentError
+  	   render json:	"Invalid date or params"
+  	   return
+  	end
+  	if start_date > end_date
+  	  @records = Record.accessible_by(current_ability).where("date >= ?" ,end_date).where("date <= ?",start_date)
+  	  render json: @records
+  	else
+  	  @records = Record.accessible_by(current_ability).where("date <= ?" ,end_date).where("date >= ?",start_date)
+  	  render json: @records  
+  	end  
+  end	
 
   def show
     render json: @record
